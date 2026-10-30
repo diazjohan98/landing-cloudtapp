@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Wifi, ChevronRight, Globe, MessageCircle, ClipboardList, Mail } from "lucide-react";
+import {
+  Wifi,
+  ChevronRight,
+  Globe,
+  MessageCircle,
+  ClipboardList,
+  Mail,
+} from "lucide-react";
 
 // Tipo genérico para aceptar 'size' en íconos custom
 interface CustomIconProps extends React.SVGProps<SVGSVGElement> {
@@ -8,7 +15,17 @@ interface CustomIconProps extends React.SVGProps<SVGSVGElement> {
 
 // Íconos SVG para redes sociales
 const Linkedin = ({ size = 24, ...props }: CustomIconProps) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
     <rect x="2" y="9" width="4" height="12" />
     <circle cx="4" cy="4" r="2" />
@@ -16,15 +33,15 @@ const Linkedin = ({ size = 24, ...props }: CustomIconProps) => (
 );
 
 const Instagram = ({ size = 24, ...props }: CustomIconProps) => (
-  <svg 
-    width={size} 
-    height={size} 
-    viewBox="0 0 24 24" 
-    fill="none" 
-    stroke="currentColor" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round" 
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
     {...props}
   >
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -34,13 +51,33 @@ const Instagram = ({ size = 24, ...props }: CustomIconProps) => (
 );
 
 const Facebook = ({ size = 24, ...props }: CustomIconProps) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
   </svg>
 );
 
 const Twitter = ({ size = 24, ...props }: CustomIconProps) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
     <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
   </svg>
 );
@@ -48,15 +85,30 @@ const Twitter = ({ size = 24, ...props }: CustomIconProps) => (
 export default function CloudTappProfile() {
   // Configuración de los enlaces para renderizado dinámico
   const links = [
-    { id: 1, title: "Sitio Web Oficial", icon: Globe, url: "https://cloudtapp.com" },
-    { id: 2, title: "Instagram", icon: Instagram, url: "https://instagram.com/cloudtapp" },
+    {
+      id: 1,
+      title: "Sitio Web Oficial",
+      icon: Globe,
+      url: "https://cloudtapp-b2b-landing.netlify.app/",
+    },
+    {
+      id: 2,
+      title: "Instagram",
+      icon: Instagram,
+      url: "https://instagram.com/cloudtapp",
+    },
     {
       id: 3,
       title: "Contacto Directo / WhatsApp",
       icon: MessageCircle,
-      url: "https://wa.me/573054331313", 
+      url: "https://wa.me/573054331313",
     },
-    { id: 4, title: "Correo Electrónico", icon: Mail, url: "mailto:ventas.cloudtapp@gmail.com" },
+    {
+      id: 4,
+      title: "Correo Electrónico",
+      icon: Mail,
+      url: "mailto:ventas.cloudtapp@gmail.com",
+    },
     { id: 5, title: "Nuestros Servicios", icon: ClipboardList, url: "#" },
   ];
 
@@ -131,7 +183,6 @@ export default function CloudTappProfile() {
 
       {/* Contenedor Principal */}
       <div className="relative min-h-screen w-full flex justify-center text-white overflow-hidden selection:bg-cyan-500 selection:text-white">
-        
         {/* FONDO ANIMADO TECNOLÓGICO */}
         <div className="fixed inset-0 z-0 pointer-events-none w-full h-full overflow-hidden bg-[#020617]">
           {/* Orbes de luz azul y cian flotantes */}
